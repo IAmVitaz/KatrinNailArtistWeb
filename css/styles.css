@@ -3,18 +3,19 @@
    ======================================== */
 
 :root {
-    /* Colors */
-    --color-primary: #722F37;
-    --color-primary-dark: #5a252c;
-    --color-primary-light: #8b3d47;
-    --color-dark: #1a1a1a;
-    --color-dark-card: #2a2a2a;
+    /* Colors - Sleek Black & White with Gray accents */
+    --color-primary: #1a1a1a;
+    --color-primary-dark: #0d0d0d;
+    --color-primary-light: #4a4a4a;
+    --color-accent: #888888;
+    --color-dark: #0d0d0d;
+    --color-dark-card: #1a1a1a;
     --color-light: #f5f5f5;
-    --color-cream: #faf8f5;
+    --color-cream: #fafafa;
     --color-white: #ffffff;
-    --color-text: #333333;
-    --color-text-light: #666666;
-    --color-text-muted: #999999;
+    --color-text: #1a1a1a;
+    --color-text-light: #4a4a4a;
+    --color-text-muted: #888888;
 
     /* Typography */
     --font-heading: 'Cormorant Garamond', Georgia, serif;
@@ -133,21 +134,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn--primary {
     background-color: var(--color-white);
-    color: var(--color-primary);
+    color: var(--color-dark);
+    border: 1px solid var(--color-white);
 }
 
 .btn--primary:hover {
-    background-color: var(--color-cream);
+    background-color: transparent;
+    color: var(--color-white);
     transform: translateY(-2px);
 }
 
 .btn--secondary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    border: 1px solid var(--color-white);
 }
 
 .btn--secondary:hover {
-    background-color: var(--color-primary-dark);
+    background-color: transparent;
+    color: var(--color-white);
     transform: translateY(-2px);
 }
 
@@ -161,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(114, 47, 55, 0.95);
+    background-color: rgba(13, 13, 13, 0.95);
     backdrop-filter: blur(10px);
     padding: var(--spacing-sm) 0;
 }
@@ -291,7 +296,6 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     pointer-events: none;
 }
 
@@ -413,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__credential-icon {
-    color: var(--color-primary);
+    color: var(--color-text);
     font-weight: 600;
 }
 
@@ -491,7 +495,7 @@ h1, h2, h3, h4, h5, h6 {
 .course-card__price {
     font-size: 1.125rem;
     font-weight: 500;
-    color: var(--color-primary-light);
+    color: var(--color-white);
 }
 
 .course-card__description {
@@ -914,7 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .highlight__icon {
-    color: var(--color-primary);
+    color: var(--color-text);
     font-weight: 600;
 }
 
@@ -947,7 +951,7 @@ h1, h2, h3, h4, h5, h6 {
 .module__number {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: var(--color-primary-light);
+    color: var(--color-white);
     font-weight: 500;
 }
 
@@ -973,7 +977,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '•';
     position: absolute;
     left: -1rem;
-    color: var(--color-primary-light);
+    color: var(--color-accent);
 }
 
 /* Video Sample */
@@ -1009,12 +1013,12 @@ h1, h2, h3, h4, h5, h6 {
 .video__play-btn {
     width: 60px;
     height: 60px;
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-white);
+    color: var(--color-dark);
     transition: transform var(--transition-base);
 }
 
@@ -1099,7 +1103,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-size: 3.5rem;
     font-weight: 500;
-    color: var(--color-primary);
+    color: var(--color-dark);
 }
 
 .pricing__currency {
@@ -1124,7 +1128,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--color-primary);
+    color: var(--color-dark);
     font-weight: 600;
 }
 
@@ -1132,12 +1136,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem 2.5rem;
     font-size: 1rem;
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-dark);
     color: var(--color-white);
+    border: 1px solid var(--color-dark);
 }
 
 .btn--large:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
     transform: translateY(-2px);
 }
 
