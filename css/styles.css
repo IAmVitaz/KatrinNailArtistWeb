@@ -922,6 +922,69 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+/* Lesson Description Topics */
+.course-description__tagline {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+}
+
+.course-description__subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.course-description__topic {
+    margin-bottom: var(--spacing-lg);
+}
+
+.course-description__topic h4 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.course-description__topic ul {
+    padding-left: var(--spacing-md);
+}
+
+.course-description__topic li {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0.25rem 0;
+    position: relative;
+    list-style: disc;
+}
+
+.course-description__notice {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-dark);
+}
+
+.course-description__notice p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.course-description__notice a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: color var(--transition-fast);
+}
+
+.course-description__notice a:hover {
+    color: var(--color-primary-dark);
+}
+
 /* Course Curriculum */
 .course-curriculum {
     padding: var(--spacing-3xl) 0;
