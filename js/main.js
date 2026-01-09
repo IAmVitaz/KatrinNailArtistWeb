@@ -36,10 +36,10 @@
 
     // Handle scroll for header styling
     function handleScroll() {
-        if (window.scrollY > 50) {
-            header.classList.add('header--scrolled');
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
         } else {
-            header.classList.remove('header--scrolled');
+            header.classList.remove('scrolled');
         }
     }
 
