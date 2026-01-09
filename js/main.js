@@ -1,6 +1,6 @@
 /**
  * Katrin Nail Artist - Main JavaScript
- * Mobile menu toggle and smooth scroll functionality
+ * Mobile menu toggle, smooth scroll, and animations
  */
 
 (function() {
@@ -59,6 +59,30 @@
         }
     }
 
+    // Scroll animations using Intersection Observer
+    function initScrollAnimations() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        if (fadeElements.length === 0) return;
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Once visible, stop observing for better performance
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+    }
+
     // Initialize
     function init() {
         // Menu toggle
@@ -89,6 +113,9 @@
 
         // Initial scroll check
         handleScroll();
+
+        // Initialize scroll animations
+        initScrollAnimations();
     }
 
     // Run initialization when DOM is ready

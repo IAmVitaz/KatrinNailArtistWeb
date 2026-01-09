@@ -7,7 +7,7 @@
     <meta name="description" content="Professional nail technician online courses by Ekaterina Azarova. Learn Russian manicure techniques from an award-winning nail artist.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
@@ -31,10 +31,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero__overlay"></div>
+    <section class="hero fade-in">
         <div class="container hero__container">
             <div class="hero__content">
+                <span class="hero__label">Professional Online Courses</span>
                 <h1 class="hero__title">Master the Art of<br>Russian Manicure</h1>
                 <p class="hero__subtitle">Professional online courses for nail technicians by award-winning artist Ekaterina Azarova</p>
                 <a href="#courses" class="btn btn--primary">Explore Courses</a>
@@ -46,12 +46,13 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about fade-in">
         <div class="container about__container">
             <div class="about__image">
                 <img src="images/682e752aee5a2_photo_2025-05-1920.45.44.jpeg" alt="Ekaterina Azarova - Nail Artist & Educator" class="about__img">
             </div>
             <div class="about__content">
+                <span class="section-label">About Me</span>
                 <h2 class="section-title">About Me</h2>
                 <p class="about__text">
                     Hi, I'm Ekaterina Azarova, an award-winning nail artist and certified educator based in Halifax, Canada. With years of experience in the beauty industry, I've developed my signature "One Bit Technique" that has transformed how nail technicians approach Russian manicure.
@@ -78,14 +79,18 @@
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="courses">
+    <section id="courses" class="courses fade-in">
         <div class="container">
-            <h2 class="section-title section-title--light">Online Courses</h2>
-            <p class="courses__intro">Elevate your skills with professional training designed for nail technicians</p>
+            <div class="courses__header">
+                <span class="section-label">Online Courses</span>
+                <h2 class="section-title">Online Courses</h2>
+                <p class="courses__intro">Elevate your skills with professional training designed for nail technicians</p>
+            </div>
 
-            <div class="courses__grid">
-                <!-- Course 1 -->
-                <article class="course-card">
+            <!-- Featured Course -->
+            <div class="courses__featured">
+                <article class="course-card course-card--featured">
+                    <div class="course-card__badge">Comprehensive Course</div>
                     <div class="course-card__image">
                         <img src="images/Russian manicure: 1 bit technique - image.jpeg" alt="Russian Manicure: 1 Bit Technique Course" class="course-card__img">
                     </div>
@@ -102,10 +107,18 @@
                             <li>90 days access</li>
                             <li>Tools, anatomy & safety</li>
                         </ul>
-                        <a href="russian-manicure-course.html" class="btn btn--secondary">Enroll Now</a>
+                        <a href="russian-manicure-course.html" class="btn btn--primary">Enroll Now</a>
                     </div>
                 </article>
+            </div>
 
+            <!-- Mini Lessons -->
+            <div class="courses__mini-section">
+                <h2 class="section-title">Mini Lessons</h2>
+                <p class="courses__intro">Focused lessons for experienced nail technicians</p>
+            </div>
+
+            <div class="courses__grid courses__grid--mini">
                 <!-- Course 2 -->
                 <article class="course-card">
                     <div class="course-card__image">
