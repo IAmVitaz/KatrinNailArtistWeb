@@ -447,10 +447,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Course Card */
 .course-card {
-    background-color: var(--color-dark-card);
+    background-color: var(--color-white);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: transform var(--transition-base);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .course-card:hover {
@@ -489,18 +490,18 @@ h1, h2, h3, h4, h5, h6 {
 .course-card__title {
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--color-white);
+    color: var(--color-dark);
 }
 
 .course-card__price {
     font-size: 1.125rem;
     font-weight: 500;
-    color: var(--color-white);
+    color: var(--color-dark);
 }
 
 .course-card__description {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-light);
     margin-bottom: var(--spacing-md);
     line-height: 1.7;
 }
@@ -514,14 +515,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-card__features li {
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-muted);
+    background-color: var(--color-light);
     padding: 0.25rem 0.75rem;
     border-radius: 100px;
 }
 
 .course-card .btn {
     width: 100%;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border: 1px solid var(--color-dark);
+}
+
+.course-card .btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark);
 }
 
 /* ========================================
@@ -1205,8 +1214,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn--large:hover {
-    background-color: var(--color-primary-light);
-    transform: translateY(-2px);
+    background-color: var(--color-white);
+    color: var(--color-dark);
 }
 
 /* Course Page Responsive Styles */
