@@ -98,3 +98,114 @@
         init();
     }
 })();
+
+/**
+ * Reviews Section - Fetch and render course reviews
+ */
+(function() {
+    'use strict';
+
+    var REVIEWS_DATA_URL = 'data/reviews.json';
+    var SCROLL_AMOUNT = 360;
+
+    function createReviewCard(review) {
+        var article = document.createElement('article');
+        article.className = 'review-card';
+        article.innerHTML =
+            '<div class="review-card__header">' +
+                '<img src="' + review.avatar + '" ' +
+                    'alt="' + review.name + '" ' +
+                    'class="review-card__avatar" ' +
+                    'loading="lazy" ' +
+                    'width="48" height="48">' +
+                '<div class="review-card__info">' +
+                    '<span class="review-card__name">' + review.name + '</span>' +
+                    '<a href="' + review.courseUrl + '" class="review-card__course">' + review.course + '</a>' +
+                '</div>' +
+            '</div>' +
+            '<blockquote class="review-card__text">' +
+                '<p>' + review.text + '</p>' +
+            '</blockquote>';
+        return article;
+    }
+
+    function addToggleButtons(track) {
+        var cards = track.querySelectorAll('.review-card');
+        cards.forEach(function(card) {
+            var p = card.querySelector('.review-card__text p');
+            if (p.scrollHeight > p.clientHeight) {
+                var btn = document.createElement('button');
+                btn.className = 'review-card__toggle';
+                btn.textContent = '... more';
+                btn.addEventListener('click', function() {
+                    var expanded = p.classList.toggle('is-expanded');
+                    btn.textContent = expanded ? '... less' : '... more';
+                });
+                card.appendChild(btn);
+            }
+        });
+    }
+
+    function renderReviews(reviews, track) {
+        var fragment = document.createDocumentFragment();
+        reviews.forEach(function(review) {
+            fragment.appendChild(createReviewCard(review));
+        });
+        track.appendChild(fragment);
+        addToggleButtons(track);
+    }
+
+    function updateArrowStates(track, prevBtn, nextBtn) {
+        var scrollLeft = Math.round(track.scrollLeft);
+        var maxScroll = track.scrollWidth - track.clientWidth;
+
+        prevBtn.disabled = scrollLeft <= 0;
+        nextBtn.disabled = scrollLeft >= maxScroll - 1;
+    }
+
+    function initReviews() {
+        var track = document.getElementById('reviewsTrack');
+        var prevBtn = document.getElementById('reviewsPrev');
+        var nextBtn = document.getElementById('reviewsNext');
+
+        if (!track) return;
+
+        fetch(REVIEWS_DATA_URL)
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('Failed to load reviews');
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                if (!data.reviews || data.reviews.length === 0) return;
+
+                renderReviews(data.reviews, track);
+
+                if (prevBtn && nextBtn) {
+                    prevBtn.addEventListener('click', function() {
+                        track.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+                    });
+
+                    nextBtn.addEventListener('click', function() {
+                        track.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+                    });
+
+                    track.addEventListener('scroll', function() {
+                        updateArrowStates(track, prevBtn, nextBtn);
+                    }, { passive: true });
+
+                    updateArrowStates(track, prevBtn, nextBtn);
+                }
+            })
+            .catch(function(error) {
+                console.warn('Reviews could not be loaded:', error.message);
+            });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initReviews);
+    } else {
+        initReviews();
+    }
+})();
