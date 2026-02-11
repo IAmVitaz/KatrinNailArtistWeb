@@ -112,16 +112,16 @@
         var article = document.createElement('article');
         article.className = 'review-card';
         article.innerHTML =
+            '<div class="review-card__stars">' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+            '</div>' +
             '<div class="review-card__header">' +
-                '<img src="' + review.avatar + '" ' +
-                    'alt="' + review.name + '" ' +
-                    'class="review-card__avatar" ' +
-                    'loading="lazy" ' +
-                    'width="48" height="48">' +
-                '<div class="review-card__info">' +
-                    '<span class="review-card__name">' + review.name + '</span>' +
-                    '<a href="' + review.courseUrl + '" class="review-card__course">' + review.course + '</a>' +
-                '</div>' +
+                '<span class="review-card__name">' + review.name + '</span>' +
+                '<a href="' + review.courseUrl + '" class="review-card__course">' + review.course + '</a>' +
             '</div>' +
             '<blockquote class="review-card__text">' +
                 '<p>' + review.text + '</p>' +
