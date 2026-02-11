@@ -197,6 +197,8 @@
 
                     updateArrowStates(track, prevBtn, nextBtn);
                 }
+
+                track.scrollLeft = 0;
             })
             .catch(function(error) {
                 console.warn('Reviews could not be loaded:', error.message);

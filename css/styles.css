@@ -579,7 +579,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-md);
     overflow-x: auto;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: var(--spacing-xs) var(--container-padding);
     scrollbar-width: none;
@@ -600,7 +599,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
-    scroll-snap-align: start;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
