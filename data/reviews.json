@@ -1,0 +1,74 @@
+{
+    "reviews": [
+        {
+            "name": "Emily S.",
+            "date": "2026-02-10",
+            "course": "Russian Manicure: 1 Bit Technique",
+            "courseUrl": "russian-manicure-course.html",
+            "text": "This course was exactly what I needed to level up my Russian manicure skills. The one-bit technique now feels natural, and my clients notice the difference in quality and comfort. The clear instructions helped me improve immediately."
+        },
+        {
+            "name": "Chloe R.",
+            "date": "2026-02-04",
+            "course": "Lesson: Difficult Cuticle",
+            "courseUrl": "lesson-difficult-cuticle.html",
+            "text": "I took this lesson to handle tough cuticle cases with more confidence. The strategies taught here really work — I’m slower to panic and much faster to get great results."
+        },
+        {
+            "name": "Svetlana L.",
+            "date": "2026-01-15",
+            "course": "Russian Manicure: 1 Bit Technique",
+            "courseUrl": "russian-manicure-course.html",
+            "text": "I absolutely loved this course! The focus on hand positioning and pressure made a huge difference in my precision. My clients are happier than ever with their manicures."
+        },
+        {
+            "name": "Hannah M.",
+            "date": "2025-12-22",
+            "course": "Lesson: Difficult Cuticle",
+            "courseUrl": "lesson-difficult-cuticle.html",
+            "text": "This lesson gave me the tools to understand different types of cuticles and how to treat them without fear. Even the challenging cases feel manageable now."
+        },
+        {
+            "name": "Madison P.",
+            "date": "2025-12-05",
+            "course": "Russian Manicure: 1 Bit Technique",
+            "courseUrl": "russian-manicure-course.html",
+            "text": "Katrin breaks everything down so clearly — from theory to technique. My overall speed and quality improved even more than I expected."
+        },
+        {
+            "name": "Ksenia K.",
+            "date": "2025-11-18",
+            "course": "Lesson: Difficult Cuticle",
+            "courseUrl": "lesson-difficult-cuticle.html",
+            "text": "I often struggled with difficult cuticles before, but this lesson gave me actionable tips that work. Now I feel confident in cases I used to avoid."
+        },
+        {
+            "name": "Lily T.",
+            "date": "2025-10-30",
+            "course": "Russian Manicure: 1 Bit Technique",
+            "courseUrl": "russian-manicure-course.html",
+            "text": "The one-bit method is a game changer for me. I learned so much about safe and efficient work — and my clients have noticed how smooth their manicure feels."
+        },
+        {
+            "name": "Natalie W.",
+            "date": "2025-10-12",
+            "course": "Lesson: Difficult Cuticle",
+            "courseUrl": "lesson-difficult-cuticle.html",
+            "text": "Such a helpful lesson! I now know how to evaluate each cuticle type and handle tricky areas without stress. My technique feels more professional already."
+        },
+        {
+            "name": "Olivia B.",
+            "date": "2025-09-25",
+            "course": "Russian Manicure: 1 Bit Technique",
+            "courseUrl": "russian-manicure-course.html",
+            "text": "I appreciated the depth of this course and how practical each section was. I can confidently use the one-bit method every day now, and my work looks more refined."
+        },
+        {
+            "name": "Grace D.",
+            "date": "2025-09-08",
+            "course": "Lesson: Difficult Cuticle",
+            "courseUrl": "lesson-difficult-cuticle.html",
+            "text": "Clear, concise, and very useful. This lesson helped me understand my mistakes and correct them in real time — I feel much more capable with complex cases."
+        }
+    ]
+}

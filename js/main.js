@@ -98,3 +98,137 @@
         init();
     }
 })();
+
+/**
+ * Reviews Section - Fetch and render course reviews
+ */
+(function() {
+    'use strict';
+
+    var REVIEWS_DATA_URL = 'data/reviews.json';
+    var SCROLL_AMOUNT = 360;
+
+    function timeAgo(dateString) {
+        var now = new Date();
+        var date = new Date(dateString);
+        var seconds = Math.floor((now - date) / 1000);
+        var minutes = Math.floor(seconds / 60);
+        var hours = Math.floor(minutes / 60);
+        var days = Math.floor(hours / 24);
+        var weeks = Math.floor(days / 7);
+        var months = Math.floor(days / 30);
+        var years = Math.floor(days / 365);
+
+        if (years >= 1) return years === 1 ? 'a year ago' : years + ' years ago';
+        if (months >= 1) return months === 1 ? 'a month ago' : months + ' months ago';
+        if (weeks >= 1) return weeks === 1 ? 'a week ago' : weeks + ' weeks ago';
+        if (days >= 1) return days === 1 ? 'a day ago' : days + ' days ago';
+        return 'today';
+    }
+
+    function createReviewCard(review) {
+        var article = document.createElement('article');
+        article.className = 'review-card';
+        article.innerHTML =
+            '<div class="review-card__stars">' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+                '<svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.85 3.75L12 4.35 9 7.3l.7 4.1L6 9.45 2.3 11.4 3 7.3 0 4.35l4.15-.6z"/></svg>' +
+            '</div>' +
+            '<div class="review-card__header">' +
+                '<div class="review-card__name-row">' +
+                    '<span class="review-card__name">' + review.name + '</span>' +
+                    '<span class="review-card__date">' + timeAgo(review.date) + '</span>' +
+                '</div>' +
+                '<a href="' + review.courseUrl + '" class="review-card__course">' + review.course + '</a>' +
+            '</div>' +
+            '<blockquote class="review-card__text">' +
+                '<p>' + review.text + '</p>' +
+            '</blockquote>';
+        return article;
+    }
+
+    function addToggleButtons(track) {
+        var cards = track.querySelectorAll('.review-card');
+        cards.forEach(function(card) {
+            var p = card.querySelector('.review-card__text p');
+            if (p.scrollHeight > p.clientHeight) {
+                var btn = document.createElement('button');
+                btn.className = 'review-card__toggle';
+                btn.textContent = '... more';
+                btn.addEventListener('click', function() {
+                    var expanded = p.classList.toggle('is-expanded');
+                    btn.textContent = expanded ? '... less' : '... more';
+                });
+                card.appendChild(btn);
+            }
+        });
+    }
+
+    function renderReviews(reviews, track) {
+        var fragment = document.createDocumentFragment();
+        reviews.forEach(function(review) {
+            fragment.appendChild(createReviewCard(review));
+        });
+        track.appendChild(fragment);
+        addToggleButtons(track);
+    }
+
+    function updateArrowStates(track, prevBtn, nextBtn) {
+        var scrollLeft = Math.round(track.scrollLeft);
+        var maxScroll = track.scrollWidth - track.clientWidth;
+
+        prevBtn.disabled = scrollLeft <= 0;
+        nextBtn.disabled = scrollLeft >= maxScroll - 1;
+    }
+
+    function initReviews() {
+        var track = document.getElementById('reviewsTrack');
+        var prevBtn = document.getElementById('reviewsPrev');
+        var nextBtn = document.getElementById('reviewsNext');
+
+        if (!track) return;
+
+        fetch(REVIEWS_DATA_URL)
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('Failed to load reviews');
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                if (!data.reviews || data.reviews.length === 0) return;
+
+                renderReviews(data.reviews, track);
+
+                if (prevBtn && nextBtn) {
+                    prevBtn.addEventListener('click', function() {
+                        track.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+                    });
+
+                    nextBtn.addEventListener('click', function() {
+                        track.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+                    });
+
+                    track.addEventListener('scroll', function() {
+                        updateArrowStates(track, prevBtn, nextBtn);
+                    }, { passive: true });
+
+                    updateArrowStates(track, prevBtn, nextBtn);
+                }
+
+                track.scrollLeft = 0;
+            })
+            .catch(function(error) {
+                console.warn('Reviews could not be loaded:', error.message);
+            });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initReviews);
+    } else {
+        initReviews();
+    }
+})();
