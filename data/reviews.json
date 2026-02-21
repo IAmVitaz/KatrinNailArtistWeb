@@ -3,72 +3,92 @@
         {
             "name": "Emily S.",
             "date": "2026-02-10",
+            "country": "Canada",
+            "experience": "4 years in nails",
             "course": "Russian Manicure: 1 Bit Technique",
             "courseUrl": "russian-manicure-course.html",
-            "text": "This course was exactly what I needed to level up my Russian manicure skills. The one-bit technique now feels natural, and my clients notice the difference in quality and comfort. The clear instructions helped me improve immediately."
+            "text": "I finally understood pocket depth - that was the missing piece for me. Before this course I was guessing every time, and my cuticle line was inconsistent. Now I know exactly how deep to go on every client."
         },
         {
             "name": "Chloe R.",
             "date": "2026-02-04",
+            "country": "UK",
+            "experience": "6 years in nails",
             "course": "Lesson: Difficult Cuticle",
             "courseUrl": "lesson-difficult-cuticle.html",
-            "text": "I took this lesson to handle tough cuticle cases with more confidence. The strategies taught here really work - I’m slower to panic and much faster to get great results."
+            "text": "No more redness or overworked skin. I used to get complaints about sensitivity after the manicure - that's completely gone now. The pressure and angle adjustments made all the difference."
         },
         {
             "name": "Svetlana L.",
             "date": "2026-01-15",
+            "country": "Germany",
+            "experience": "8 years in nails",
             "course": "Russian Manicure: 1 Bit Technique",
             "courseUrl": "russian-manicure-course.html",
-            "text": "I absolutely loved this course! The focus on hand positioning and pressure made a huge difference in my precision. My clients are happier than ever with their manicures."
+            "text": "Faster workflow, cleaner cuticle line. I cut my manicure time by about 10 minutes per client just by switching to one bit. The system is very logical - once you understand the zones, everything clicks."
         },
         {
             "name": "Hannah M.",
             "date": "2025-12-22",
+            "country": "USA",
+            "experience": "3 years in nails",
             "course": "Lesson: Difficult Cuticle",
             "courseUrl": "lesson-difficult-cuticle.html",
-            "text": "This lesson gave me the tools to understand different types of cuticles and how to treat them without fear. Even the challenging cases feel manageable now."
+            "text": "I used to avoid clients with tight, adhered cuticles because I was scared of cutting or damaging the skin. This lesson broke it down step by step - now those are my easiest appointments."
         },
         {
             "name": "Madison P.",
             "date": "2025-12-05",
+            "country": "Australia",
+            "experience": "5 years in nails",
             "course": "Russian Manicure: 1 Bit Technique",
             "courseUrl": "russian-manicure-course.html",
-            "text": "Katrin breaks everything down so clearly - from theory to technique. My overall speed and quality improved even more than I expected."
+            "text": "I stopped buying new bits hoping they'd fix my results. Turns out it was my angle and pressure, not the tool. This course fixed both - one flame bit is genuinely all I need now."
         },
         {
             "name": "Ksenia K.",
             "date": "2025-11-18",
+            "country": "Canada",
+            "experience": "2 years in nails",
             "course": "Lesson: Difficult Cuticle",
             "courseUrl": "lesson-difficult-cuticle.html",
-            "text": "I often struggled with difficult cuticles before, but this lesson gave me actionable tips that work. Now I feel confident in cases I used to avoid."
+            "text": "My lifting problem at the cuticle line is gone. I didn't realize how much my cuticle prep was affecting gel adhesion until I learned the proper technique here. Clients are going 3+ weeks now."
         },
         {
             "name": "Lily T.",
             "date": "2025-10-30",
+            "country": "Ireland",
+            "experience": "7 years in nails",
             "course": "Russian Manicure: 1 Bit Technique",
             "courseUrl": "russian-manicure-course.html",
-            "text": "The one-bit method is a game changer for me. I learned so much about safe and efficient work - and my clients have noticed how smooth their manicure feels."
+            "text": "The high RPM safety section alone was worth the price. I was terrified of going above 15k - now I work at 25k comfortably and my clients say the manicure feels smoother than ever."
         },
         {
             "name": "Natalie W.",
             "date": "2025-10-12",
+            "country": "USA",
+            "experience": "4 years in nails",
             "course": "Lesson: Difficult Cuticle",
             "courseUrl": "lesson-difficult-cuticle.html",
-            "text": "Such a helpful lesson! I now know how to evaluate each cuticle type and handle tricky areas without stress. My technique feels more professional already."
+            "text": "I learned how to read each cuticle type before I even start the e-file. That evaluation step changed everything - I'm not guessing anymore, I have a clear plan for every finger."
         },
         {
             "name": "Olivia B.",
             "date": "2025-09-25",
+            "country": "Canada",
+            "experience": "5 years in nails",
             "course": "Russian Manicure: 1 Bit Technique",
             "courseUrl": "russian-manicure-course.html",
-            "text": "I appreciated the depth of this course and how practical each section was. I can confidently use the one-bit method every day now, and my work looks more refined."
+            "text": "My manicures finally look 'fresh' after 2 weeks. Before, clients would come back with grown-out cuticle lines after 7-10 days. The pocket technique keeps everything clean much longer."
         },
         {
             "name": "Grace D.",
             "date": "2025-09-08",
+            "country": "UK",
+            "experience": "3 years in nails",
             "course": "Lesson: Difficult Cuticle",
             "courseUrl": "lesson-difficult-cuticle.html",
-            "text": "Clear, concise, and very useful. This lesson helped me understand my mistakes and correct them in real time - I feel much more capable with complex cases."
+            "text": "Clear, practical, no fluff. I watched it twice and applied it the same day. The before-and-after difference on my very next client was obvious - even she noticed."
         }
     ]
 }

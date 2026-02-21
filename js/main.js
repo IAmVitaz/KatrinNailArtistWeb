@@ -108,6 +108,27 @@
     var REVIEWS_DATA_URL = 'data/reviews.json';
     var SCROLL_AMOUNT = 360;
 
+    var COUNTRY_FLAGS = {
+        'Canada': '\u{1F1E8}\u{1F1E6}',
+        'UK': '\u{1F1EC}\u{1F1E7}',
+        'USA': '\u{1F1FA}\u{1F1F8}',
+        'Germany': '\u{1F1E9}\u{1F1EA}',
+        'Australia': '\u{1F1E6}\u{1F1FA}',
+        'Ireland': '\u{1F1EE}\u{1F1EA}'
+    };
+
+    function formatInfo(review) {
+        var parts = [];
+        if (review.country) {
+            var flag = COUNTRY_FLAGS[review.country];
+            parts.push(flag ? flag + ' ' + review.country : review.country);
+        }
+        if (review.experience) {
+            parts.push(review.experience);
+        }
+        return parts.join(' · ');
+    }
+
     function timeAgo(dateString) {
         var now = new Date();
         var date = new Date(dateString);
@@ -142,6 +163,7 @@
                     '<span class="review-card__name">' + review.name + '</span>' +
                     '<span class="review-card__date">' + timeAgo(review.date) + '</span>' +
                 '</div>' +
+                (review.country || review.experience ? '<span class="review-card__info">' + formatInfo(review) + '</span>' : '') +
                 '<a href="' + review.courseUrl + '" class="review-card__course">' + review.course + '</a>' +
             '</div>' +
             '<blockquote class="review-card__text">' +
