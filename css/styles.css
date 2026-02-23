@@ -583,6 +583,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-dark);
 }
 
+.course-card__price--free {
+    color: #c0392b;
+    font-weight: 600;
+}
+
 .course-card__description {
     font-size: 0.9rem;
     color: var(--color-text-light);
@@ -1520,6 +1525,69 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-muted);
     font-size: 0.9rem;
     margin-top: var(--spacing-sm);
+}
+
+/* Lesson Intro Text */
+.lesson-intro {
+    margin-bottom: var(--spacing-xl);
+}
+
+.lesson-intro p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Lesson CTA Section */
+.lesson-cta {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-light);
+}
+
+.lesson-cta__card {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lesson-cta__lead {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+}
+
+.lesson-cta__title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.lesson-cta__list {
+    list-style: none;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.lesson-cta__list li {
+    padding: var(--spacing-xs) 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--color-text-light);
+}
+
+.lesson-cta__list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
 /* Pricing Section */
