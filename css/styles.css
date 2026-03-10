@@ -590,6 +590,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0.25rem;
 }
 
+.course-card__price--old {
+    color: #c0392b;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    text-decoration-color: #c0392b;
+    margin-right: 0.25rem;
+}
+
 .course-card__price--free {
     color: #c0392b;
     font-weight: 600;
@@ -1644,6 +1653,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3.5rem;
     font-weight: 500;
     color: var(--color-dark);
+}
+
+.pricing__amount--old {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    color: #c0392b;
+    text-decoration: line-through;
+    text-decoration-color: #c0392b;
+    margin-right: 0.5rem;
 }
 
 .pricing__currency {
