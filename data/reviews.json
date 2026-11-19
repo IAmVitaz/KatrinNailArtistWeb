@@ -1,6 +1,24 @@
 {
     "reviews": [
         {
+            "name": "Angela",
+            "date": "2026-10-15",
+            "country": "Canada",
+            "experience": "Halifax",
+            "course": "Russian Manicure: 1 Bit Technique",
+            "courseUrl": "russian-manicure-course.html",
+            "text": "After taking her online course, I wanted to continue learning with her in person. I chose this training because I wanted to refine the details that matter in my work: careful cuticle care. Katerina, you are a wonderful educator, and I'm so grateful for the opportunity to learn from you, both online and in person. Your guidance helped me understand my technique more deeply and see where I could improve."
+        },
+        {
+            "name": "Nail Artist",
+            "date": "2026-09-05",
+            "country": "Ireland",
+            "experience": "Dublin",
+            "course": "Russian Manicure: 1 Bit Technique",
+            "courseUrl": "russian-manicure-course.html",
+            "text": "I have done many Russian manicure courses but I would say your one is more advanced level because it shows in more detail. Could see clearly the steps with short clear lessons on how to move through every step :) I'm going to watch another time everything but take notes and the 3rd time I'll watch when I'm practicing on myself."
+        },
+        {
             "name": "Emily S.",
             "date": "2026-02-10",
             "country": "Canada",
